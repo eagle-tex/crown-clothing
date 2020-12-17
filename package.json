@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "sass": "^1.30.0",
     "web-vitals": "^0.2.4",
@@ -29,8 +30,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint . --ignore-path ./.gitignore",
+    "lint:fix": "eslint . --fix --ignore-path ./.gitignore",
     "format": "./node_modules/.bin/prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|scss|md|vue)\""
   },
   "eslintConfig": {
@@ -41,8 +42,8 @@
     ]
   },
   "prettier": {
-    "trailingComma": "es5",
-    "semi": false,
+    "trailingComma": "none",
+    "semi": true,
     "singleQuote": true,
     "printWidth": 90,
     "endOfLine": "lf",
@@ -57,7 +58,7 @@
   },
   "lint-staged": {
     "*.+(js|jsx)": [
-      "eslint --fix",
+      "eslint --fix --ignore-path ./.gitignore",
       "git add"
     ],
     "*.+(json|css|scss|md)": [
