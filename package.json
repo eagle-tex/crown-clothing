@@ -29,10 +29,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint . --ignore-path ./.gitignore",
-    "lint:fix": "eslint . --fix --ignore-path ./.gitignore",
-    "format": "./node_modules/.bin/prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|scss|md|vue)\""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -42,7 +39,7 @@
     ]
   },
   "prettier": {
-    "trailingComma": "none",
+    "trailingComma": "es5",
     "semi": true,
     "singleQuote": true,
     "printWidth": 90,
@@ -58,12 +55,10 @@
   },
   "lint-staged": {
     "*.+(js|jsx)": [
-      "eslint --fix --ignore-path ./.gitignore",
-      "git add"
+      "eslint --fix --ignore-path ./.gitignore"
     ],
     "*.+(json|css|scss|md)": [
-      "./node_modules/.bin/prettier --write",
-      "git add"
+      "./node_modules/.bin/prettier --write"
     ]
   },
   "browserslist": {
